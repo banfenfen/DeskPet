@@ -28,7 +28,7 @@ public class CleanlinessState {
      */
     public void increase(int num) {
         cleanliness = Math.min(Max_Value, cleanliness + num);
-        System.out.printf("[CleanlinessState::increase(%d)]-当前体力值=%d\n", num, cleanliness);
+        System.out.printf("[CleanlinessState::increase(%d)]-当前清洁度=%d\n", num, cleanliness);
     }
 
     /**

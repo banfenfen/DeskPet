@@ -42,7 +42,7 @@ public class EmotionState {
      * 心情值增加
      */
     public void increase() {
-        if (emotion < Max_Value) showIncreasedAnimation();
+        //if (emotion < Max_Value) showIncreasedAnimation();
         emotion = Math.min(Max_Value, emotion + Increase_Step);
         System.out.printf("[EmotionState::increase]-当前心情=%d\n", emotion);
     }

@@ -16,12 +16,14 @@ public class TotalState {
     private final StaminaState staminaState;
     private final CleanlinessState cleanlinessState;
     private final MoneyState moneyState;
+    private final HealthState healthState;
 
     private TotalState() {
         emotionState = new EmotionState();
         staminaState = new StaminaState();
         cleanlinessState = new CleanlinessState();
         moneyState =new MoneyState();
+        healthState = new HealthState();
     }
 
     public static TotalState getInstance() {
@@ -44,5 +46,7 @@ public class TotalState {
     public MoneyState getMoneyState(){
         return moneyState;
     }
+
+    public HealthState getHealthState() {return healthState; }
 
 }

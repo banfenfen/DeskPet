@@ -8,10 +8,15 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+import org.taibai.hellohei.constant.Constant;
 import org.taibai.hellohei.items.bath.BathItem;
+import org.taibai.hellohei.items.drug.DrugItem;
 import org.taibai.hellohei.items.food.FoodItem;
 import org.taibai.hellohei.items.ItemWarehouse;
 import org.taibai.hellohei.state.TotalState;
+import org.taibai.hellohei.ui.Action;
+import org.taibai.hellohei.ui.ActionExecutor;
+import org.taibai.hellohei.ui.InterfaceFunction;
 
 import java.util.Map;
 
@@ -59,6 +64,7 @@ public class ItemsWindowController {
                 break;
             case DrugTitle:
                 loadDrugItems();
+                break;
         }
     }
 
@@ -93,7 +99,35 @@ public class ItemsWindowController {
     }
 
     private void loadDrugItems() {
-
+        Map<String, DrugItem> drugItemList = ItemWarehouse.getInstance().getDrugItemMap();
+        for (Map.Entry<String, DrugItem> entry : drugItemList.entrySet()) {
+            if (entry.getValue().getItemNum() != 0) {
+                vbox.getChildren().add(entry.getValue().toItemAnchorPane());
+            }
+        }
+        ObservableList<Node> children = vbox.getChildren();
+        children.forEach(c -> c.setOnMouseReleased(e -> {
+            if (TotalState.getInstance().getHealthState().canIncrease()) {
+                stage.close();
+            }
+        }));
     }
 
+    /*private void setSleepState() {
+        InterfaceFunction.getInstance().say("遇到困难睡大觉zzz", Constant.UserInterface.SayingRunTime);
+        Action action = Action.creatTemporaryUninterruptibleAction(
+                "/org/taibai/hellohei/img/before sleep.gif",
+                Constant.UserInterface.ActionRunTime,
+                Constant.ImageShow.mainImage
+        );
+        ActionExecutor.getInstance().execute(action);
+        action = Action.creatTemporaryUninterruptibleAction(
+                "/org/taibai/hellohei/img/sleeping.gif",
+                Constant.UserInterface.ActionRunTime*20,
+                Constant.ImageShow.mainImage
+        );
+        ActionExecutor.getInstance().execute(action);
+        // 增加健康值
+        TotalState.getInstance().getStaminaState().increase(30);
+    }*/
 }

@@ -2,6 +2,8 @@ package org.taibai.hellohei.items;
 
 import org.taibai.hellohei.items.bath.BathEnum;
 import org.taibai.hellohei.items.bath.BathItem;
+import org.taibai.hellohei.items.drug.DrugEnum;
+import org.taibai.hellohei.items.drug.DrugItem;
 import org.taibai.hellohei.items.food.FoodEnum;
 import org.taibai.hellohei.items.food.FoodItem;
 
@@ -20,6 +22,7 @@ public class ItemWarehouse {
 
     private final Map<String, FoodItem> foodItemMap = new HashMap<>();
     private final Map<String, BathItem> bathItemMap = new HashMap<>();
+    private final Map<String, DrugItem> drugItemMap = new HashMap<>();
 
     private ItemWarehouse() {
         // 这里默认有10个，等后端系统写好后就可以持久化了
@@ -29,6 +32,9 @@ public class ItemWarehouse {
         // 这里也默认有10个洗澡用品
         for (BathEnum bathEnum : BathEnum.values()) {
             bathItemMap.put(bathEnum.getId(), new BathItem(bathEnum, 10));
+        }
+        for (DrugEnum drugEnum : DrugEnum.values()) {
+            drugItemMap.put(drugEnum.getId(), new DrugItem(drugEnum, 10));
         }
     }
 
@@ -43,5 +49,9 @@ public class ItemWarehouse {
 
     public Map<String, BathItem> getBathItemMap() {
         return bathItemMap;
+    }
+
+    public Map<String, DrugItem> getDrugItemMap() {
+        return drugItemMap;
     }
 }
