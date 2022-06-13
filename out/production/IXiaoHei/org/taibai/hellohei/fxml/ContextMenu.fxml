@@ -12,31 +12,20 @@
                 prefWidth="110.0" stylesheets="@ContextMenu.css" text="喂食"/>
         <Button layoutX="13.0" layoutY="46.0" mnemonicParsing="false" onAction="#bath" prefHeight="23.0"
                 prefWidth="110.0" text="洗澡"/>
-<<<<<<< HEAD
         <Button layoutX="13.0" layoutY="78.0" mnemonicParsing="false" onAction="#drug" prefHeight="23.0"
                 prefWidth="110.0" text="看病"/>
         <Button layoutX="13.0" layoutY="110.0" mnemonicParsing="false" onAction="#sleep"
                 prefHeight="23.0" prefWidth="110.0" text="睡觉"/>
         <Button layoutX="13.0" layoutY="142.0" mnemonicParsing="false" onAction="#study"
                 prefHeight="23.0" prefWidth="110.0" text="学习"/>
-        <Button layoutX="13.0" layoutY="174.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="打工"/>
-        <Button layoutX="13.0" layoutY="210.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="商城"/>
+        <Button layoutX="13.0" layoutY="174.0" mnemonicParsing="false" onAction="#work"
+                prefHeight="23.0" prefWidth="110.0" text="打工"/>
+        <Button layoutX="13.0" layoutY="210.0" mnemonicParsing="false" onAction="#shop"
+                prefHeight="23.0" prefWidth="110.0" text="商城"/>
         <Button layoutX="13.0" layoutY="242.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="状态"/>
         <Button layoutX="13.0" layoutY="278.0" mnemonicParsing="false" onAction="#hide"
                 prefHeight="23.0" prefWidth="110.0" text="隐藏"/>
         <Button layoutX="13.0" layoutY="310.0" mnemonicParsing="false" onAction="#exit"
                 prefHeight="23.0" prefWidth="110.0" text="退出"/>
-=======
-        <Button layoutX="13.0" layoutY="77.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="看病"/>
-        <Button layoutX="13.0" layoutY="108.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="睡觉"/>
-        <Button layoutX="13.0" layoutY="139.0" mnemonicParsing="false" onAction="#work" prefHeight="23.0"
-                prefWidth="110.0" text="打工"/>
-        <Button layoutX="13.0" layoutY="173.0" mnemonicParsing="false" onAction="#shop" prefHeight="23.0"
-                prefWidth="110.0" text="商城"/>
-        <Button layoutX="13.0" layoutY="205.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="学习"/>
-        <Button layoutX="13.0" layoutY="236.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="状态"/>
-        <Button layoutX="13.0" layoutY="267.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="隐藏"/>
-        <Button layoutX="14.0" layoutY="301.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="退出"/>
->>>>>>> gyt-dev
     </children>
 </AnchorPane>

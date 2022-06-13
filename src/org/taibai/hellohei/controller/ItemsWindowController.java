@@ -9,12 +9,9 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
-<<<<<<< HEAD
 import org.taibai.hellohei.constant.Constant;
-=======
 import org.taibai.hellohei.img.ResourceGetter;
 import org.taibai.hellohei.items.Shop.Shopitem;
->>>>>>> gyt-dev
 import org.taibai.hellohei.items.bath.BathItem;
 import org.taibai.hellohei.items.drug.DrugItem;
 import org.taibai.hellohei.items.food.FoodItem;
@@ -75,16 +72,12 @@ public class ItemsWindowController {
             case DrugTitle:
                 loadDrugItems();
                 break;
-<<<<<<< HEAD
-=======
             case ShopTitle:
                 loadShopItems();
                 break;
             case WorkTitle:
                 loadWorkItems();
                 break;
-
->>>>>>> gyt-dev
         }
     }
 
