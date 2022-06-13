@@ -29,6 +29,10 @@ public class Constant {
         public static final String guitarImage = prefix + "playing guitar.gif";
         // 心情增加
         public static final String emotionIncreasingImage = prefix + "smiling clouds.png";
+        // 输液
+        public static final String havingTransfusionImage = prefix + "transfusion.gif";
+        // 吃药
+        public static final String havingCapsuleImage = prefix + "drinking water.gif";
 
         public static class ItemImage {
             // 食物清单——鸡蛋
@@ -38,6 +42,12 @@ public class Constant {
 
             // 洗澡用品——肥皂
             public static final String soapImage = prefix + "bath/soap.png";
+
+            // 吃药清单——胶囊
+            public static final String capsuleImage = prefix + "drugs/capsule.png";
+            // 吃药清单——输液袋
+            public static final String transfusionImage = prefix + "drugs/transfusion.png";
+
         }
 
     }

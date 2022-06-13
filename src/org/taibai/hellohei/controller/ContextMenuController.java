@@ -10,6 +10,11 @@ import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import org.taibai.hellohei.constant.Constant;
+import org.taibai.hellohei.state.TotalState;
+import org.taibai.hellohei.ui.Action;
+import org.taibai.hellohei.ui.ActionExecutor;
+import org.taibai.hellohei.ui.InterfaceFunction;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -52,6 +57,18 @@ public class ContextMenuController {
     public void bath() {
         preStage.close();
         showItemsWindow(ItemsWindowController.BathTitle);
+    }
+
+    @FXML
+    public void drug() {
+        preStage.close();
+        showItemsWindow(ItemsWindowController.DrugTitle);
+    }
+
+    @FXML
+    public void sleep() {
+        preStage.close();
+        setSleepState();
     }
 
     private void showItemsWindow(String title) {
@@ -99,4 +116,26 @@ public class ContextMenuController {
         stage.show();
     }
 
+    private void setSleepState() {
+        if(!TotalState.getInstance().getStaminaState().canIncrease())
+        {
+            InterfaceFunction.getInstance().say("睡什么睡起来嗨！", Constant.UserInterface.SayingRunTime);
+            return;
+        }
+        InterfaceFunction.getInstance().say("遇到困难睡大觉zzz", Constant.UserInterface.SayingRunTime);
+        /*Action action = Action.creatTemporaryUninterruptibleAction(
+                "/org/taibai/hellohei/img/before sleep.gif",
+                Constant.UserInterface.ActionRunTime,
+                "/org/taibai/hellohei/img/sleeping.gif"
+        );
+        ActionExecutor.getInstance().execute(action);*/
+        Action action = Action.creatTemporaryUninterruptibleAction(
+                "/org/taibai/hellohei/img/sleeping.gif",
+                Constant.UserInterface.ActionRunTime*5,
+                Constant.ImageShow.mainImage
+        );
+        ActionExecutor.getInstance().execute(action);
+        // 增加健康值
+        TotalState.getInstance().getStaminaState().increase(30);
+    }
 }

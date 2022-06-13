@@ -70,7 +70,7 @@ public class BathItem {
         decrease(1);
         Action action = Action.creatTemporaryInterruptableAction(
                 bathEnum.getActionPath(),
-                Constant.UserInterface.ActionRunTime * 2,
+                Constant.UserInterface.ActionRunTime,
                 Constant.ImageShow.mainImage
         );
         ActionExecutor.getInstance().execute(action);
