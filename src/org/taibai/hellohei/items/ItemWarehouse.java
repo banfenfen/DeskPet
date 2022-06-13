@@ -1,11 +1,15 @@
 package org.taibai.hellohei.items;
 
+import org.taibai.hellohei.items.Shop.ShopEnum;
+import org.taibai.hellohei.items.Shop.Shopitem;
 import org.taibai.hellohei.items.bath.BathEnum;
 import org.taibai.hellohei.items.bath.BathItem;
 import org.taibai.hellohei.items.drug.DrugEnum;
 import org.taibai.hellohei.items.drug.DrugItem;
 import org.taibai.hellohei.items.food.FoodEnum;
 import org.taibai.hellohei.items.food.FoodItem;
+import org.taibai.hellohei.items.work.WorkEnum;
+import org.taibai.hellohei.items.work.WorkItem;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +27,8 @@ public class ItemWarehouse {
     private final Map<String, FoodItem> foodItemMap = new HashMap<>();
     private final Map<String, BathItem> bathItemMap = new HashMap<>();
     private final Map<String, DrugItem> drugItemMap = new HashMap<>();
+    private final Map<String, Shopitem> shopitemMap = new HashMap<>();
+    private final Map<String, WorkItem> workItemMap = new HashMap<>();
 
     private ItemWarehouse() {
         // 这里默认有10个，等后端系统写好后就可以持久化了
@@ -35,6 +41,15 @@ public class ItemWarehouse {
         }
         for (DrugEnum drugEnum : DrugEnum.values()) {
             drugItemMap.put(drugEnum.getId(), new DrugItem(drugEnum, 10));
+        }
+        //  默认商店里有20个物品
+        for (ShopEnum shopEnum : ShopEnum.values()) {
+            shopitemMap.put(shopEnum.getId(), new Shopitem(shopEnum, 20,10) );
+        }
+
+        //  默认有10个工作
+        for (WorkEnum workEnum : WorkEnum.values()) {
+            workItemMap.put(workEnum.getId(),new WorkItem(workEnum,10));
         }
     }
 
@@ -51,7 +66,15 @@ public class ItemWarehouse {
         return bathItemMap;
     }
 
-    public Map<String, DrugItem> getDrugItemMap() {
-        return drugItemMap;
+    public Map<String, DrugItem> getDrugItemMap(){
+            return drugItemMap;
+        }
+
+    public Map<String, Shopitem> getShopitemMap() {
+        return shopitemMap;
+    }
+
+    public Map<String, WorkItem> getWorkItemMap() {
+        return workItemMap;
     }
 }

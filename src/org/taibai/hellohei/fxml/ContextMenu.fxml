@@ -18,8 +18,10 @@
                 prefHeight="23.0" prefWidth="110.0" text="睡觉"/>
         <Button layoutX="13.0" layoutY="142.0" mnemonicParsing="false" onAction="#study"
                 prefHeight="23.0" prefWidth="110.0" text="学习"/>
-        <Button layoutX="13.0" layoutY="174.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="打工"/>
-        <Button layoutX="13.0" layoutY="210.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="商城"/>
+        <Button layoutX="13.0" layoutY="174.0" mnemonicParsing="false" onAction="#work"
+                prefHeight="23.0" prefWidth="110.0" text="打工"/>
+        <Button layoutX="13.0" layoutY="210.0" mnemonicParsing="false" onAction="#shop"
+                prefHeight="23.0" prefWidth="110.0" text="商城"/>
         <Button layoutX="13.0" layoutY="242.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="状态"/>
         <Button layoutX="13.0" layoutY="278.0" mnemonicParsing="false" onAction="#hide"
                 prefHeight="23.0" prefWidth="110.0" text="隐藏"/>

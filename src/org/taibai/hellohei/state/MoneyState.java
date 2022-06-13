@@ -4,6 +4,14 @@ public class MoneyState {
 
     private int TotalMoney = 60;
 
+
+    public int getTotalMoney(){
+        return TotalMoney;
+    }
+
+    public String toString(){
+        return Integer.toString(TotalMoney);
+    }
     /**
      * 余额降低
      */
@@ -20,6 +28,12 @@ public class MoneyState {
         TotalMoney = TotalMoney + num;
         System.out.printf("[MoneyState::increase(%d)]-当前余额=%d\n", num, TotalMoney);
     }
+
+    /**
+     * 余额增加
+     *
+     * @param num 增加的量
+     */
 
 
 }

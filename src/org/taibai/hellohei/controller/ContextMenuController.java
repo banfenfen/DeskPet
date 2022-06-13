@@ -86,7 +86,21 @@ public class ContextMenuController {
         setStudyState();
     }
 
+    public void shop() {
+        preStage.close();
+        showItemsWindow(ItemsWindowController.ShopTitle);
+    }
 
+    public void work() {
+        preStage.close();
+        showItemsWindow(ItemsWindowController.WorkTitle);
+    }
+
+ /*   public void find() {
+        preStage.close();
+        showItemsWindow(ItemsWindowController.FindTitle);
+    }
+*/
     private void showItemsWindow(String title) {
         // ====== 设置名义上的stage，避免在任务栏生成一个小窗口 ======
         final Stage nominalStage = new Stage();

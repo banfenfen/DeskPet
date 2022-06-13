@@ -32,6 +32,16 @@ public class StaminaState {
     }
 
     /**
+     * 体力值减少
+     *
+     * @param num 减少的量
+     */
+    public void decrease(int num) {
+        stamina = Math.max(0, stamina - num);
+        System.out.printf("[StaminaState::decrease(%d)]-当前体力值=%d\n", num, stamina);
+    }
+
+    /**
      * 是否还能增加
      *
      * @return 能否增加
@@ -40,4 +50,12 @@ public class StaminaState {
         return stamina < Max_Value;
     }
 
+    /**
+     * 是否还能减少
+     *
+     * @return 能否减少
+     */
+    public boolean canDecrease() {
+        return stamina == 0;
+    }
 }

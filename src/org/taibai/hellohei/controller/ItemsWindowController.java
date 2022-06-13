@@ -6,13 +6,20 @@ import javafx.geometry.Pos;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.stage.Stage;
+<<<<<<< HEAD
 import org.taibai.hellohei.constant.Constant;
+=======
+import org.taibai.hellohei.img.ResourceGetter;
+import org.taibai.hellohei.items.Shop.Shopitem;
+>>>>>>> gyt-dev
 import org.taibai.hellohei.items.bath.BathItem;
 import org.taibai.hellohei.items.drug.DrugItem;
 import org.taibai.hellohei.items.food.FoodItem;
 import org.taibai.hellohei.items.ItemWarehouse;
+import org.taibai.hellohei.items.work.WorkItem;
 import org.taibai.hellohei.state.TotalState;
 import org.taibai.hellohei.ui.Action;
 import org.taibai.hellohei.ui.ActionExecutor;
@@ -31,6 +38,9 @@ public class ItemsWindowController {
     public static final String FoodTitle = "食物仓库";
     public static final String BathTitle = "沐浴仓库";
     public static final String DrugTitle = "药品仓库";
+    public static final String ShopTitle = "商店";
+    public static final String WorkTitle = "打工";
+    public static final String FindTitle = "钱包";
 
     @FXML
     public Label title;
@@ -65,6 +75,16 @@ public class ItemsWindowController {
             case DrugTitle:
                 loadDrugItems();
                 break;
+<<<<<<< HEAD
+=======
+            case ShopTitle:
+                loadShopItems();
+                break;
+            case WorkTitle:
+                loadWorkItems();
+                break;
+
+>>>>>>> gyt-dev
         }
     }
 
@@ -97,6 +117,37 @@ public class ItemsWindowController {
             }
         }));
     }
+
+    private void loadShopItems() {
+        Map<String, Shopitem> shopItemList = ItemWarehouse.getInstance().getShopitemMap();
+        for (Map.Entry<String, Shopitem> entry : shopItemList.entrySet()) {
+            if (entry.getValue().getItemNum() != 0) {
+                vbox.getChildren().add(entry.getValue().toItemAnchorPane());
+            }
+        }
+        ObservableList<Node> children = vbox.getChildren();
+        children.forEach(c -> c.setOnMouseReleased(e -> {
+            if (TotalState.getInstance().getCleanlinessState().canIncrease()) {
+                stage.close();
+            }
+        }));
+    }
+
+    private void loadWorkItems() {
+        Map<String, WorkItem> workItemList = ItemWarehouse.getInstance().getWorkItemMap();
+        for (Map.Entry<String, WorkItem> entry : workItemList.entrySet()) {
+            if (entry.getValue().getItemNum() != 0) {
+                vbox.getChildren().add(entry.getValue().toItemAnchorPane());
+            }
+        }
+        ObservableList<Node> children = vbox.getChildren();
+        children.forEach(c -> c.setOnMouseReleased(e -> {
+            if (TotalState.getInstance().getCleanlinessState().canIncrease()) {
+                stage.close();
+            }
+        }));
+   }
+
 
     private void loadDrugItems() {
         Map<String, DrugItem> drugItemList = ItemWarehouse.getInstance().getDrugItemMap();
