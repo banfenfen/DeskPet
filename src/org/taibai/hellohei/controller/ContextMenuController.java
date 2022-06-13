@@ -1,5 +1,8 @@
 package org.taibai.hellohei.controller;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Rectangle2D;
@@ -10,12 +13,15 @@ import javafx.scene.paint.Color;
 import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
+import javafx.util.Duration;
 import org.taibai.hellohei.constant.Constant;
 import org.taibai.hellohei.state.TotalState;
 import org.taibai.hellohei.ui.Action;
 import org.taibai.hellohei.ui.ActionExecutor;
 import org.taibai.hellohei.ui.InterfaceFunction;
+import org.taibai.hellohei.ui.MainNode;
 
+import java.awt.*;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -40,6 +46,9 @@ public class ContextMenuController {
      * 打开的菜单左上角Y坐标，为了打开二级菜单
      */
     private double screenY;
+
+    private final Stage stage = MainNode.getInstance().getStage();
+    private final ActionExecutor actionExecutor = ActionExecutor.getInstance();
 
     public void Init(Stage stage, double screenX, double screenY) {
         this.preStage = stage;
@@ -70,6 +79,13 @@ public class ContextMenuController {
         preStage.close();
         setSleepState();
     }
+
+    @FXML
+    public void study() {
+        preStage.close();
+        setStudyState();
+    }
+
 
     private void showItemsWindow(String title) {
         // ====== 设置名义上的stage，避免在任务栏生成一个小窗口 ======
@@ -135,7 +151,27 @@ public class ContextMenuController {
                 Constant.ImageShow.mainImage
         );
         ActionExecutor.getInstance().execute(action);
-        // 增加健康值
+        // 增加体力值
         TotalState.getInstance().getStaminaState().increase(30);
+    }
+
+    private void setStudyState() {
+        InterfaceFunction.getInstance().say("啊~~~学不动了", Constant.UserInterface.SayingRunTime);
+        Action action = Action.creatTemporaryUninterruptibleAction(
+                "/org/taibai/hellohei/img/die.gif",
+                Constant.UserInterface.ActionRunTime,
+                Constant.ImageShow.mainImage
+        );
+        ActionExecutor.getInstance().execute(action);
+    }
+
+    public void hide() {
+        Platform.setImplicitExit(false);
+        Platform.runLater(stage::hide);
+    }
+
+    public void exit() {
+        preStage.close();
+        InterfaceFunction.getInstance().exit();
     }
 }

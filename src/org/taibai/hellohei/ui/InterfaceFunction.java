@@ -35,7 +35,7 @@ public class InterfaceFunction {
     private final ActionExecutor actionExecutor = ActionExecutor.getInstance();
     private final Stage stage = MainNode.getInstance().getStage();
     private VBox messageBox;
-    private CheckboxMenuItem itemSay = new CheckboxMenuItem("碎碎念");
+    private CheckboxMenuItem itemSay = new CheckboxMenuItem("Chatter");
     private final String greet = "好久不见鸭，想你了~";
 
     private InterfaceFunction() {
@@ -114,7 +114,7 @@ public class InterfaceFunction {
     /**
      * 添加系统托盘
      *
-     * @param stage 舞台
+     *@param stage 舞台
      */
     public void setTray(Stage stage) {
         SystemTray tray = SystemTray.getSystemTray();
@@ -125,10 +125,10 @@ public class InterfaceFunction {
             PopupMenu popMenu = new PopupMenu();
             popMenu.setFont(new Font("微软雅黑", Font.PLAIN, 14));
 
-            MenuItem itemShow = new MenuItem("显示");
+            MenuItem itemShow = new MenuItem("Show");
             itemShow.addActionListener(e -> Platform.runLater(stage::show));
 
-            MenuItem itemHide = new MenuItem("隐藏");
+            MenuItem itemHide = new MenuItem("Hide");
             // 要先setImplicitExit(false)，否则stage.hide()会直接关闭stage
             // stage.hide()等同于stage.close()
             itemHide.addActionListener(e -> {
@@ -136,7 +136,7 @@ public class InterfaceFunction {
                 Platform.runLater(stage::hide);
             });
 
-            MenuItem itemExit = new MenuItem("退出");
+            MenuItem itemExit = new MenuItem("Exit");
             itemExit.addActionListener(e -> exit());
 
             popMenu.add(itemSay);

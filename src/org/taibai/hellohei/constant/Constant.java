@@ -61,7 +61,7 @@ public class Constant {
         /**
          * 说话的消息框维持的时间
          */
-        public static final int SayingRunTime = 4;
+        public static final int SayingRunTime = 3;
 
         /**
          * 碎碎念
