@@ -8,7 +8,7 @@ import org.taibai.hellohei.constant.Constant;
 import org.taibai.hellohei.img.ResourceGetter;
 
 /**
- * <p>Creation Time: 2021-09-25 02:59:11</p>
+ *
  * <p>Description: 小黑的心情值</p>
  *
  * @author 太白

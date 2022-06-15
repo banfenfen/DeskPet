@@ -1,7 +1,7 @@
 package org.taibai.hellohei.state;
 
 /**
- * <p>Creation Time: 2021-09-28 00:56:19</p>
+ *
  * <p>Description: 清洁度状态</p>
  *
  * @author 太白

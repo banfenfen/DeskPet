@@ -1,7 +1,7 @@
 package org.taibai.hellohei.state;
 
 /**
- * <p>Creation Time: 2021-09-28 00:51:27</p>
+ *
  * <p>Description: 体力值</p>
  *
  * @author 太白

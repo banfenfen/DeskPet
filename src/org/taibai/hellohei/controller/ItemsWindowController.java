@@ -25,7 +25,7 @@ import org.taibai.hellohei.ui.InterfaceFunction;
 import java.util.Map;
 
 /**
- * <p>Creation Time: 2021-09-27 00:32:16</p>
+ *
  * <p>Description: 货物列表控制器，该窗口用于展示食物、洗澡用品、打工列表</p>
  *
  * @author 太白

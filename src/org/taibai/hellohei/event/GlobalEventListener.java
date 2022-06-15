@@ -12,7 +12,7 @@ import static javafx.scene.input.MouseButton.PRIMARY;
 import static javafx.scene.input.MouseButton.SECONDARY;
 
 /**
- * <p>Creation Time: 2021-09-22 12:50:52</p>
+ *
  * <p>Description: 全局事件监听者</p>
  *
  * @author 太白

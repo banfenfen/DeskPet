@@ -1,7 +1,7 @@
 package org.taibai.hellohei.constant;
 
 /**
- * <p>Creation Time: 2021-09-21 18:00:49</p>
+ *
  * <p>Description: 各种常量，集中管理</p>
  *
  * @author 太白

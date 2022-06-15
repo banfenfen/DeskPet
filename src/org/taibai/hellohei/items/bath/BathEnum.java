@@ -3,7 +3,7 @@ package org.taibai.hellohei.items.bath;
 import org.taibai.hellohei.constant.Constant;
 
 /**
- * <p>Creation Time: 2021-09-28 00:01:02</p>
+ *
  * <p>Description: 洗澡用品清单</p>
  *
  * @author 太白

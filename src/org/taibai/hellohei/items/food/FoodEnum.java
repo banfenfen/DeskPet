@@ -1,7 +1,7 @@
 package org.taibai.hellohei.items.food;
 
 /**
- * <p>Creation Time: 2021-09-27 17:22:01</p>
+ *
  * <p>Description: Item列表，列出所有食物、洗澡用品、药物</p>
  *
  * @author 太白

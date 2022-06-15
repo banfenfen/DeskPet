@@ -13,7 +13,7 @@ import org.taibai.hellohei.ui.ActionExecutor;
 import org.taibai.hellohei.ui.InterfaceFunction;
 
 /**
- * <p>Creation Time: 2021-09-28 00:01:20</p>
+ *
  * <p>Description: 洗澡的物品</p>
  *
  * @author 太白
