@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="bg" prefHeight="321.0" prefWidth="138.0"
+<AnchorPane id="bg" prefHeight="353.0" prefWidth="138.0"
             style="-fx-background-color: rgba(255, 255, 255, 0.8); -fx-background-radius: 10px; -fx-border-radius: 10px;"
             stylesheets="@ContextMenu.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="org.taibai.hellohei.controller.ContextMenuController">
@@ -22,10 +22,11 @@
                 prefHeight="23.0" prefWidth="110.0" text="打工"/>
         <Button layoutX="13.0" layoutY="210.0" mnemonicParsing="false" onAction="#shop"
                 prefHeight="23.0" prefWidth="110.0" text="商城"/>
-        <!--<Button layoutX="13.0" layoutY="242.0" mnemonicParsing="false" prefHeight="23.0" prefWidth="110.0" text="状态"/>-->
-        <Button layoutX="13.0" layoutY="246.0" mnemonicParsing="false" onAction="#hide"
+        <Button layoutX="13.0" layoutY="246.0" mnemonicParsing="false" onAction="#chat"
+                prefHeight="23.0" prefWidth="110.0" text="聊天"/>
+        <Button layoutX="13.0" layoutY="282.0" mnemonicParsing="false" onAction="#hide"
                 prefHeight="23.0" prefWidth="110.0" text="隐藏"/>
-        <Button layoutX="13.0" layoutY="278.0" mnemonicParsing="false" onAction="#exit"
+        <Button layoutX="13.0" layoutY="314.0" mnemonicParsing="false" onAction="#exit"
                 prefHeight="23.0" prefWidth="110.0" text="退出"/>
     </children>
 </AnchorPane>

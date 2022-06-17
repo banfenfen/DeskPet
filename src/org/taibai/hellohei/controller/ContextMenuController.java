@@ -14,6 +14,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import org.taibai.hellohei.ChatFrame;
 import org.taibai.hellohei.constant.Constant;
 import org.taibai.hellohei.state.TotalState;
 import org.taibai.hellohei.ui.Action;
@@ -94,6 +95,12 @@ public class ContextMenuController {
     public void work() {
         preStage.close();
         showItemsWindow(ItemsWindowController.WorkTitle);
+    }
+
+    public void chat() {
+        preStage.close();
+        ChatFrame chatFrame = ChatFrame.getInstance();
+        chatFrame.setVisible(true);
     }
 
  /*   public void find() {

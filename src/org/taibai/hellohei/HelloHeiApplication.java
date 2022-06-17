@@ -16,6 +16,8 @@ import org.taibai.hellohei.state.TotalState;
 import org.taibai.hellohei.ui.InterfaceFunction;
 import org.taibai.hellohei.ui.MainNode;
 
+import javax.swing.*;
+import java.awt.*;
 import java.io.IOException;
 import java.util.Objects;
 
@@ -36,6 +38,8 @@ public class HelloHeiApplication extends Application {
     private GlobalEventListener globalEventListener;
 
     private final ResourceGetter resourceGetter = ResourceGetter.getInstance();
+
+    public static JLabel loveLabel;
 
     @Override
     public void start(Stage primaryStage) {
@@ -58,6 +62,13 @@ public class HelloHeiApplication extends Application {
         primaryStage.show();
         stage.show();
         interfaceFunction.setTray(stage);   //添加系统托盘
+
+        loveLabel = new JLabel("亲密度: " + "10" + "/" + "20");
+        loveLabel.setForeground(Color.BLACK);
+        loveLabel.setFont(new Font("微软雅黑", Font.BOLD, 12));
+        loveLabel.setBounds(20,100,120,20);
+        loveLabel.setVisible(false);
+        //this.add(loveLabel);
     }
 
     public static void main(String[] args) {
