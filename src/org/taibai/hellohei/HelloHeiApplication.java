@@ -80,7 +80,7 @@ public class HelloHeiApplication extends Application {
         imageView.setImage(image);
         imageView.setX(0);
         imageView.setY(0);
-        imageView.setLayoutX(0);
+        imageView.setLayoutX(20);
         imageView.setLayoutY(50);
         imageView.setFitHeight(Constant.ImageShow.ImageHeight); // 设置图片显示的大小
         imageView.setFitHeight(Constant.ImageShow.ImageWidth);
