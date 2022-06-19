@@ -28,7 +28,7 @@ import java.util.Map;
  *
  * <p>Description: 货物列表控制器，该窗口用于展示食物、洗澡用品、打工列表</p>
  *
- * @author 太白
+ * @author
  */
 public class ItemsWindowController {
 

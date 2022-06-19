@@ -9,7 +9,7 @@ import java.util.Map;
  *
  * <p>Description: 获取一个新的交互动作以及交互动作的关闭</p>
  *
- * @author 太白
+ * @author
  */
 public class ActionGenerator {
 

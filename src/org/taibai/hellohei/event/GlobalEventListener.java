@@ -15,7 +15,7 @@ import static javafx.scene.input.MouseButton.SECONDARY;
  *
  * <p>Description: 全局事件监听者</p>
  *
- * @author 太白
+ * @author
  */
 public class GlobalEventListener {
 

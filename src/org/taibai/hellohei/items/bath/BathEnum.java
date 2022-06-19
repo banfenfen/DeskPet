@@ -6,7 +6,7 @@ import org.taibai.hellohei.constant.Constant;
  *
  * <p>Description: 洗澡用品清单</p>
  *
- * @author 太白
+ * @author
  */
 public enum BathEnum {
 

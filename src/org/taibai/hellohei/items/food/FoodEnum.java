@@ -4,7 +4,7 @@ package org.taibai.hellohei.items.food;
  *
  * <p>Description: Item列表，列出所有食物、洗澡用品、药物</p>
  *
- * @author 太白
+ * @author
  */
 public enum FoodEnum {
 

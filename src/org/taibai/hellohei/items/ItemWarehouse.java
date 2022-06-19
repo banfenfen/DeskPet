@@ -18,7 +18,7 @@ import java.util.Map;
  *
  * <p>Description: Item存量</p>
  *
- * @author 太白
+ * @author
  */
 public class ItemWarehouse {
 

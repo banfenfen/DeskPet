@@ -11,7 +11,7 @@ import org.taibai.hellohei.img.ResourceGetter;
  *
  * <p>Description: 小黑的心情值</p>
  *
- * @author 太白
+ * @author
  */
 public class EmotionState {
 

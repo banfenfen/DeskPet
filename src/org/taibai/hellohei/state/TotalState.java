@@ -6,7 +6,7 @@ import javax.swing.text.html.ImageView;
  *
  * <p>Description: 小黑的所有状态</p>
  *
- * @author 太白
+ * @author
  */
 public class TotalState {
 

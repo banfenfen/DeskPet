@@ -4,7 +4,7 @@ package org.taibai.hellohei.state;
  *
  * <p>Description: 清洁度状态</p>
  *
- * @author 太白
+ * @author
  */
 public class CleanlinessState {
 

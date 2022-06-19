@@ -25,7 +25,7 @@ import java.util.Random;
  *
  * <p>Description: 交互功能</p>
  *
- * @author 太白
+ * @author
  */
 public class InterfaceFunction {
 

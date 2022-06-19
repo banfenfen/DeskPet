@@ -11,7 +11,7 @@ import java.util.WeakHashMap;
  *
  * <p>Description: 资源加载器</p>
  *
- * @author 太白
+ * @author
  */
 public class ResourceGetter {
 

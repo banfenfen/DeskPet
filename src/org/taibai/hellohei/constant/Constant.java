@@ -4,7 +4,7 @@ package org.taibai.hellohei.constant;
  *
  * <p>Description: 各种常量，集中管理</p>
  *
- * @author 太白
+ *
  */
 public class Constant {
 

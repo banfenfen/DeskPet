@@ -4,7 +4,7 @@ package org.taibai.hellohei.state;
  *
  * <p>Description: 体力值</p>
  *
- * @author 太白
+ * @author
  */
 public class StaminaState {
 

@@ -15,7 +15,7 @@ import org.taibai.hellohei.ui.InterfaceFunction;
  *
  * <p>Description: 供以吃东西、洗澡、看病的物品</p>
  *
- * @author 太白
+ * @author
  */
 public class FoodItem {
 

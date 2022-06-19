@@ -16,7 +16,7 @@ import org.taibai.hellohei.ui.InterfaceFunction;
  *
  * <p>Description: 洗澡的物品</p>
  *
- * @author 太白
+ * @author
  */
 public class BathItem {
 
