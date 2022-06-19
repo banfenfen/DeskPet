@@ -58,7 +58,7 @@ public class InterfaceFunction {
     private void initMessage() {
         Label bubble = new Label();
         // 设置气泡的宽度。如果没有这句，就会根据内容多少来自适应宽度
-        bubble.setPrefWidth(100);
+        bubble.setPrefWidth(145);
         bubble.setWrapText(true);   //自动换行
         bubble.setStyle("-fx-background-color: rgba(255,255,255,0.7); -fx-background-radius: 8px;");
         bubble.setPadding(new Insets(7)); //标签的内边距的宽度

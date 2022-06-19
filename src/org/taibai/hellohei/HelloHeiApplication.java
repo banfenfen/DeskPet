@@ -39,8 +39,6 @@ public class HelloHeiApplication extends Application {
 
     private final ResourceGetter resourceGetter = ResourceGetter.getInstance();
 
-    public static JLabel loveLabel;
-
     @Override
     public void start(Stage primaryStage) {
         primaryStage.initStyle(StageStyle.UTILITY);
@@ -63,12 +61,14 @@ public class HelloHeiApplication extends Application {
         stage.show();
         interfaceFunction.setTray(stage);   //添加系统托盘
 
-        loveLabel = new JLabel("亲密度: " + "10" + "/" + "20");
-        loveLabel.setForeground(Color.BLACK);
-        loveLabel.setFont(new Font("微软雅黑", Font.BOLD, 12));
-        loveLabel.setBounds(20,100,120,20);
-        loveLabel.setVisible(false);
-        //this.add(loveLabel);
+        UpdatingThread emotionThread = new UpdatingThread(1000, 1);
+        UpdatingThread cleanlinessThread = new UpdatingThread(1000, 2);
+        UpdatingThread healthThread = new UpdatingThread(1000, 3);
+        UpdatingThread staminaThread = new UpdatingThread(1000, 4);
+        emotionThread.start();
+        cleanlinessThread.start();
+        healthThread.start();
+        staminaThread.start();
     }
 
     public static void main(String[] args) {

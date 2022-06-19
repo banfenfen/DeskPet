@@ -10,9 +10,13 @@ public class StaminaState {
 
     private int stamina = 60;
 
-    public static final int Reduce_Step = 2;
+    public static final int Reduce_Step = 1;
     public static final int Max_Value = 100;
     public static final int Min_Value = 0;
+
+    public int getStamina() {
+        return stamina;
+    }
 
     /**
      * 体力值降低

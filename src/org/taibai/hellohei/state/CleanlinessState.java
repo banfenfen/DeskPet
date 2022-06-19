@@ -10,12 +10,16 @@ public class CleanlinessState {
 
     private int cleanliness = 60;
 
-    public static final int Reduce_Step = 2;
+    public static final int Reduce_Step = 1;
     public static final int Max_Value = 100;
     public static final int Min_Value = 0;
 
+    public int getCleanliness() {
+        return cleanliness;
+    }
+
     /**
-     * 心情值降低
+     * 清洁度降低
      */
     public void reduce() {
         cleanliness = Math.max(Min_Value, cleanliness - Reduce_Step);

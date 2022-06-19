@@ -19,7 +19,7 @@ public class EmotionState {
      * 心情值，取值为[0, 100]
      */
     private int emotion = 60;
-    public static final int Reduce_Step = 5;
+    public static final int Reduce_Step = 1;
     public static final int Increase_Step = 10;
     public static final int Max_Value = 100;
     public static final int Min_Value = 0;
@@ -29,6 +29,10 @@ public class EmotionState {
 
     public EmotionState() {
         imageView = new ImageView();
+    }
+
+    public int getEmotion() {
+        return emotion;
     }
 
     /**

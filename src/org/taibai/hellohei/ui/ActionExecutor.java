@@ -56,6 +56,13 @@ public class ActionExecutor {
                     Constant.ImageShow.mainImage));
             // 同时会增加心情值
             TotalState.getInstance().getEmotionState().increase();
+            InterfaceFunction.getInstance().say(
+                    "心情：" + TotalState.getInstance().getEmotionState().getEmotion()
+                    + " 健康：" + TotalState.getInstance().getHealthState().getHealth() + "\n"
+                    + "清洁：" + TotalState.getInstance().getCleanlinessState().getCleanliness()
+                    + " 体力：" + TotalState.getInstance().getStaminaState().getStamina() + "\n"
+                    + "余额：" + TotalState.getInstance().getMoneyState().getTotalMoney(),
+                    Constant.UserInterface.SayingRunTime);
         }
         return ok;
     }

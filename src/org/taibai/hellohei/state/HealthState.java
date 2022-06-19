@@ -3,9 +3,13 @@ package org.taibai.hellohei.state;
 public class HealthState {
     private int health = 60;
 
-    public static final int Reduce_Step = 10;
+    public static final int Reduce_Step = 1;
     public static final int Max_Value = 100;
     public static final int Min_Value = 0;
+
+    public int getHealth() {
+        return health;
+    }
 
     /**
      * 健康值降低
